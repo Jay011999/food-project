@@ -166,12 +166,12 @@ h3{
 }
 
 .meals-showcase{
+    display: flex;
     list-style: none;
     width:100%;
 }
 
-.meals-showcase li{ 
-    display: block;
+.meals-showcase li{
     float: left;
     width: 25%;
 }
@@ -203,8 +203,8 @@ opacity: 0.7;
     margin-right: 30px;
 }
 
-.clear-fix{zoom:1}
-.clear-fix::after{
+.clearfix{zoom:1}
+.clearfix::after{
     content: '.';
     clear: both;
     display: block;
@@ -214,6 +214,8 @@ opacity: 0.7;
 
 .section-steps{
     background-color: #F4F4F4;
+    display: flex;
+    flex-direction: column;
 }
 
 .works-step{
@@ -267,6 +269,12 @@ margin-top: 30px;
     height: auto;
     margin: 15px 0px 0px ;
 }
+
+.section-cities{
+    display: flex;
+    flex-direction: column;
+}
+
 .city-feature{
     margin-bottom: 5px;
 
@@ -299,9 +307,12 @@ a:hover,a:active{
 }
 
 .section-testimonials{
-    /* background-image: url('img/back-customers.jpg');
-    background-size: cover;
-    color: #fff; */
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('img/back-customers.jpg');
+    background-size:cover;
+    color: #fff;
+    background-attachment: fixed;
 }
 
 blockquote{
@@ -309,7 +320,7 @@ blockquote{
     font-style: italic;
     line-height: 145%;
     margin-top: 40px;
- position: relative;
+    position: relative;
 }
 
 cite{
@@ -336,11 +347,13 @@ blockquote::before{
 }
 
 .section-plans{
-    /* background-color: #F4F4F4; */
+    background-color: #F4F4F4;
+    display: flex;
+    flex-direction: column;
 }
 
 .plan-box{
-    background-color: #F4F4F4;
+    background-color: #fff;
     border-radius: 5px;
     width: 90%;
     margin-left: 5%;
@@ -381,6 +394,7 @@ blockquote::before{
 }
 
 .plan-box div:first-child{
+    background-color: #fcfcfc;
     border-top-left-radius: 5px;
     border-top-right-radius: 10px;
 }
@@ -388,6 +402,7 @@ blockquote::before{
 .contact-form{
     width: 60%;
     margin: 0 auto;
+    display: inline-block;
 }
 
 input[type=text],
@@ -406,25 +421,23 @@ textarea{
 input[type=checkbox]{
  margin: 10px 5px 10px 0;
 }
+.section-form{
+   text-align: center;
+}
 
 footer{
-    /* background-color: #333; */
+    display: flex;
+    background-color: #333;
     padding: 50px;
     font-size: 80%;
 }
 
 .footer-nav {
-    background-color: #F4F4F4;
-    border-radius: 5px;
-
-list-style: none;
-float: left;
+    list-style: none;
+    float: left;
 }
 
 .social-links {
-    background-color: #F4F4F4;
-    font-weight: 200;
-    border-radius: 5px;
     list-style: none;
     float: right;
     }
@@ -434,16 +447,25 @@ float: left;
     margin-right: 20px;
 }
 
+
 .footer-nav li a:link,
 .footer-nav li a:visited,
 .social-links li a:link,
 .social-links li a:visited{
     text-decoration: none;
     border:0;
+    color: #888;
+}
+
+.footer-nav li a:hover,
+.social-links li a:hover{
+    color: #ddd;
 }
 
 footer p{
-    font-weight: 200;
-    background-color: #F4F4F4;
-    border-radius: 5px;
+    color: #888;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 20px;
 }
+
